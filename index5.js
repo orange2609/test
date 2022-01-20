@@ -37,7 +37,6 @@ function setup()
 
   btn1 = createImg("06boss big.png","");
   btn1.position(centerX+388,centerY+145.5);
-  btn1.mousePressed(goNext);
   btn1.size(300,200) //調整按鈕大小
 
   btn2 = createImg("06Sabrina big.png","");
