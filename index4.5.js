@@ -11,7 +11,6 @@ let PlayNotice=0
 
 function preload(){
   BackPic = loadImage('04.jpg'); //載入圖片
-  NoPic = loadImage('05notice.png'); //載入圖片
   PlayJacky=0;
   PlayHeart=0;
   PlayMonica=0;
@@ -36,15 +35,15 @@ function setup()
   
   image(BackPic,0,0);
 
-  btn1 = createImg("05boss big.png","");
-  btn1.position(centerX+388,centerY+130.5);
+  btn1 = createImg("06boss big.png","");
+  btn1.position(centerX+388,centerY+145.5);
   btn1.mousePressed(goNext);
-  //btn1.size(454,128) //調整按鈕大小
+  btn1.size(300,200) //調整按鈕大小
 
-  btn2 = createImg("05Sabrina big.png","");
-  btn2.position(centerX+855,centerY+140.5);
+  btn2 = createImg("06Sabrina big.png","");
+  btn2.position(centerX+700,centerY+145.5);
   btn2.mousePressed(goSabrina);
-  btn2.size(460,215) //調整按鈕大小
+  btn2.size(300,200) //調整按鈕大小
 
   btn2 = createImg("05heart big.png","");
   btn2.position(centerX+396,centerY+369.5);
@@ -60,14 +59,20 @@ function setup()
   btn3.position(centerX+1010,centerY+367.5);
   btn3.mousePressed(goJacky);
   btn3.size(300,200) //調整按鈕大小
+
+  btn2 = createImg("05notice.png","");
+  btn2.position(centerX+1010,centerY+175.5);
+  btn2.size(300,150)
+
+  btn2 = createImg("05noticebtn.png","");
+  btn2.position(centerX+1233,centerY+280.5);
+  btn2.mousePressed(goNext);
+  btn2.size(50,30)
   
   text('Score : '+totalPlay,centerX+800,centerY+700);
   //text('Score : '+mouseY,centerX+800,centerY+750);
   totalPlay=PlayHeart+PlayJacky+PlayMonica+PlaySabrina;
-  if(totalPlay>=3)
-  {
-    goNext()
-  }
+  
 }
 
 let myCanvas; //宣告畫布變數
@@ -83,7 +88,7 @@ function windowResized() {
 }
   function goNext()
 {
-  window.open('index4.5.html','_self');
+  window.open('index5.html','_self');
 }
 function goJacky()
 {
